@@ -1,0 +1,491 @@
+/* Global styling */
+body,
+html {
+  min-height: 100vh;
+  /* background: linear-gradient(to bottom right, #b2f5ea, #ffffff, #9ae6b4); */
+  background: linear-gradient(to bottom right, #bdd3f9, #ffffff, #9ae6b4);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Page Heading */
+h3{
+  text-align: center;
+  font-size: 40px;
+  background-color: black;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Date picker width */
+.datepicker{
+width: 200px;
+}
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.8);
+  /* Slight transparency to blend with background */
+  padding: 10px 20px;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Style for Logout button */
+.logout-button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 0;
+  margin-top: 0px;
+}
+
+.logout-button:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard.css */
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.dashboard-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.dashboard-box:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-box i {
+  font-size: 40px;
+  /* Increased icon size */
+  margin-bottom: 10px;
+  color: black;
+}
+
+.dashboard-box h3 {
+  margin: 10px 0;
+  color: black;
+}
+
+.dashboard-box p {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Placeholder.css, Policies.css and Claims.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+  /* Each form group takes equal space */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.policyholders-list,
+.policies-list,
+.claims-list {
+  overflow-x: auto;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.policyholders-header,
+.policies-header{
+  display: flex;
+  width: 100%;
+  /* Ensure this matches the min-width of each .policyholder-item */
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.policy-item {
+  display: flex;
+  width: 100%;
+  /* Adjust the min-width according to your design */
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.policy-item div,
+.policies-header div {
+  text-align: left;
+}
+
+/* Placeholder.css */
+
+.policyholders-header,
+.policyholder-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Each column should have a fixed width */
+.policyholders-header div,
+.policyholder-item div {
+  text-align: left;
+}
+
+.policyholders-header div:nth-child(1),
+.policyholder-item div:nth-child(1) {
+  width: 100px; /* Policyholder ID */
+}
+
+.policyholders-header div:nth-child(2),
+.policyholder-item div:nth-child(2) {
+  width: 150px; /* Name */
+}
+
+.policyholders-header div:nth-child(3),
+.policyholder-item div:nth-child(3) {
+  width: 200px; /* Email */
+}
+
+.policyholders-header div:nth-child(4),
+.policyholder-item div:nth-child(4) {
+  width: 150px; /* Contact No. */
+}
+
+.policyholders-header div:nth-child(5),
+.policyholder-item div:nth-child(5) {
+  width: 150px; /* Date */
+}
+
+.policyholders-header div:nth-child(6),
+.policyholder-item div:nth-child(6) {
+  width: 150px; /* Actions */
+}
+
+/* Add padding to make the layout look neat */
+.policyholders-header div,
+.policyholder-item div {
+  padding: 5px;
+}
+
+
+/* Add padding to make the layout look neat */
+.policyholders-header div,
+.policyholder-item div {
+  padding: 5px;
+}
+
+.highlighted-row {
+  background-color: aliceblue !important;
+}
+
+.policyholder-item button,
+.policy-item button,
+.claim-item button {
+  padding: 8px;
+  width: 50px;
+}
+
+.button-column {
+  display: flex;
+  gap: 5px;
+  /* Adjust the gap between buttons as needed */
+}
+.button-column button{
+  width: 25px;
+}
+.style {
+  font-size: 10px;
+}
+
+/* Policies page styling */
+.policies-header div:nth-child(1),
+.policy-item div:nth-child(1){
+  width: 80px;
+}
+
+.policies-header div:nth-child(2),
+.policy-item div:nth-child(2){
+  width: 100px;
+}
+.policies-header div:nth-child(3),
+.policy-item div:nth-child(3){
+  width: 80px;
+}
+.policies-header div:nth-child(4),
+.policy-item div:nth-child(4){
+  width: 80px;
+}
+.policies-header div:nth-child(5),
+.policy-item div:nth-child(5){
+  width: 100px;
+}
+.policies-header div:nth-child(6),
+.policy-item div:nth-child(6){
+  width: 100px;
+}
+.policies-header div:nth-child(7),
+.policy-item div:nth-child(7){
+  width: 100px;
+}
+.policies-header div:nth-child(8),
+.policy-item div:nth-child(8){
+  width: 100px;
+}
+/* claim page styling */
+
+.claims-header,
+.claim-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.claims-header{
+  font-weight: bold;
+}
+/* Each column should have a fixed width */
+.claims-header div,
+.claim-item div {
+  text-align: left;
+}
+
+.claims-header div:nth-child(1),
+.claim-item div:nth-child(1) {
+  width: 100px;
+  /* Claim ID */
+}
+
+.claims-header div:nth-child(2),
+.claim-item div:nth-child(2) {
+  width: 150px;
+  /* Policy ID */
+}
+
+.claims-header div:nth-child(3),
+.claim-item div:nth-child(3) {
+  width: 150px;
+  /* Claim Amount */
+}
+
+.claims-header div:nth-child(4),
+.claim-item div:nth-child(4) {
+  width: 150px;
+  /* Claim Date */
+}
+
+.claims-header div:nth-child(5),
+.claim-item div:nth-child(5) {
+  width: 100px;
+  /* Actions */
+}
+
+/* Add padding to make the layout look neat */
+.claims-header div,
+.claim-item div {
+  padding: 5px;
+}
+
+/* Ensure actions buttons are aligned properly */
+.claim-item button {
+  padding: 8px;
+  width: 70px;
+  border: none;
+  cursor: pointer;
+}
+
+.claim-item button:hover {
+  background-color: #c82333;
+}
+
+/* Adjust button styling for consistency */
+.button-column {
+  display: flex;
+  gap: 2px;
+  
+}
+
+.button-column button{
+  width: 25px;
+}
+
+/* styling for the login page and register page*/
+
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  width: 420px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  padding: 30px 40px;
+  background-color: white;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  line-height: none;
+  color: #041e42;
+}
+
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 40px;
+  font-size: 16px;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  color: #818ea0;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #333;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.wrapper .btn:hover {
+  background-color: #555;
+}
+
+.wrapper .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20PX 0 15px;
+}
+
+.register-link p a {
+  color: #818ea0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+.wrapper p {
+  color: black;
+}
